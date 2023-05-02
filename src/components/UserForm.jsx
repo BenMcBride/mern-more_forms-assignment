@@ -20,7 +20,7 @@ const UserForm = (props) => {
   const handleFirstName = e => {
     setFirstName(e.target.value);
     if (e.target.value.length < 1) {
-      setFirstNameError("First Name is required")
+      setFirstNameError("")
     } else if(e.target.value.length < 2) {
       setFirstNameError("First Name must be at least 2 characters")
     } else {
@@ -31,7 +31,7 @@ const UserForm = (props) => {
   const handleLastName = e => {
     setLastName(e.target.value);
     if (e.target.value.length < 1) {
-      setLastNameError("Last Name is required")
+      setLastNameError("")
     } else if(e.target.value.length < 2) {
       setLastNameError("Last Name must be at least 2 characters")
     } else {
@@ -42,7 +42,7 @@ const UserForm = (props) => {
   const handleEmail = e => {
     setEmail(e.target.value);
     if (e.target.value.length < 1) {
-      setEmailError("Email is required")
+      setEmailError("")
     } else if(e.target.value.length < 2) {
       setEmailError("Email must be at least 2 characters")
     } else {
@@ -53,7 +53,7 @@ const UserForm = (props) => {
   const handlePassword = e => {
     setPassword(e.target.value);
     if (e.target.value.length < 1) {
-      setPasswordError("Password and Confrim Password are required")
+      setPasswordError("")
     } else if(e.target.value.length < 8) {
       setPasswordError("Password must be at least 8 characters")
     } else {
@@ -102,7 +102,7 @@ const UserForm = (props) => {
           }
           {
             confirmPassword !== password ?
-            <p style={{color:'red'}}>Passwords do not match</p> :
+            <p style={{color:'red'}}>Passwords must match</p> :
             ''
           }
         </div>
