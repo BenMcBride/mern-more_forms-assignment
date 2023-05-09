@@ -71,7 +71,7 @@ const UserForm = (props) => {
       <form onSubmit={createUser}>
         <div>
           <label>First Name: </label>
-          <input type="text" onChange={ handleFirstName } />
+          <input type="text" onChange={ handleFirstName } value={firstname} />
           {
             firstNameError ?
             <p style={{color:'red'}}>{ firstNameError }</p> : ''
@@ -79,7 +79,7 @@ const UserForm = (props) => {
         </div>
         <div>
           <label>Last Name: </label>
-          <input type="text" onChange={ handleLastName } />
+          <input type="text" onChange={ handleLastName }  value={lastname} />
           {
             lastNameError ?
             <p style={{color:'red'}}>{ lastNameError }</p> : ''
@@ -87,7 +87,7 @@ const UserForm = (props) => {
         </div>
         <div>
           <label>Email Address: </label>
-          <input type="text" onChange={ handleEmail } />
+          <input type="text" onChange={ handleEmail }  value={email} />
           {
             emailError ?
             <p style={{color:'red'}}>{ emailError }</p> : ''
@@ -95,7 +95,7 @@ const UserForm = (props) => {
         </div>
         <div>
           <label>Password: </label>
-          <input type="password" id="password" onChange={ handlePassword } />
+          <input type="password" id="password" onChange={ handlePassword }/>
           {
             passwordError ?
             <p style={{color:'red'}}>{ passwordError }</p> : ''
